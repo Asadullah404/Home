@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Electricity Meter Readings</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href= index.html>Home</a></li>
+            <li><a href= datainsertion.html>Data Insertion</a></li>
+            <li><a href= History.html>History</a></li>
+            <li><a href= Calculation.html>Calculation</a></li>
+        </ul>
+    </nav>
+
+<section id="calculation">
+    <h2>Calculation</h2>
+    <div id="calc-container">
+        <div>
+            <h3>Units Used from Date to Date</h3>
+            <form id="date-range-form">
+                <label for="calcMeterId">Meter ID:</label>
+                <input type="text" id="calcMeterId" required>
+                <label for="calcStartDate">Start Date:</label>
+                <input type="date" id="calcStartDate" required>
+                <label for="calcEndDate">End Date:</label>
+                <input type="date" id="calcEndDate" required>
+                <button type="submit">Calculate</button>
+            </form>
+            <div id="date-range-result"></div>
+        </div>
+        <div>
+            <h3>Units Consumption Per Day & Total Unit</h3>
+            <form id="units-per-day-form">
+                <label for="prevReading">Previous Reading:</label>
+                <input type="number" id="prevReading" required>
+                <label for="currReading">Current Reading:</label>
+                <input type="number" id="currReading" required>
+                <button type="submit">Calculate</button>
+            </form>
+            <div id="units-per-day-result"></div>
+            <div id="total-units-result"></div>
+        </div>
+        <div>
+            <h3>Units by Watt * Hour</h3>
+            <form id="watt-hour-form">
+                <label for="watts">Watts:</label>
+                <input type="number" id="watts" required>
+                <label for="hours">Hours:</label>
+                <input type="number" id="hours" required>
+                <button type="submit">Calculate</button>
+            </form>
+            <div id="watt-hour-result"></div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 Electricity Meter Readings. All rights reserved.</p>
+</footer>
+
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
